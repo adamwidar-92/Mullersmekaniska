@@ -1,0 +1,34 @@
+{
+  "nav": {
+    "home": "Hem",
+    "about": "Om oss",
+    "products": "Produkter",
+    "competencies": "Kompetenser",
+    "news": "Nyheter",
+    "contact": "Kontakt"
+  },
+  "common": {
+    "contactUs": "Kontakta oss",
+    "requestQuote": "Begär offert",
+    "learnMore": "Läs mer",
+    "back": "Tillbaka"
+  },
+  "hero": {
+    "slogan": "Quality by Innovation",
+    "tagline": "Högkvalitativa precisionkomponenter för formverktyg och plastindustrin",
+    "cta": "Begär offert"
+  },
+  "about": {
+    "title": "Om Müller Mekaniska AB",
+    "founded": "Grundat 1970",
+    "location": "Borås, Sverige",
+    "employees": "Ca 40 anställda",
+    "factory": "7000 m² fabrik"
+  },
+  "footer": {
+    "address": "Viaredsvägen 16, 504 64 Borås, Sverige",
+    "phone": "Telefon",
+    "email": "E-post",
+    "allRightsReserved": "Alla rättigheter förbehållna"
+  }
+}

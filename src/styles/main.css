@@ -1,0 +1,9 @@
+@import "tailwindcss";
+@import "tailwindcss/theme" layer(theme);
+
+@layer theme {
+  --color-dark: #1a1a1a;
+  --color-metal-gray: #2d2d2d;
+  --color-accent-orange: #e85d04;
+  --color-accent-orange-dark: #d74d00;
+}

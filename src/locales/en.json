@@ -1,0 +1,34 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "products": "Products",
+    "competencies": "Competencies",
+    "news": "News",
+    "contact": "Contact"
+  },
+  "common": {
+    "contactUs": "Contact Us",
+    "requestQuote": "Request Quote",
+    "learnMore": "Learn More",
+    "back": "Back"
+  },
+  "hero": {
+    "slogan": "Quality by Innovation",
+    "tagline": "High-quality precision components for mold tools and plastic injection machines",
+    "cta": "Request Quote"
+  },
+  "about": {
+    "title": "About Müller Mekaniska AB",
+    "founded": "Founded 1970",
+    "location": "Borås, Sweden",
+    "employees": "Approx. 40 employees",
+    "factory": "7000 m² factory"
+  },
+  "footer": {
+    "address": "Viaredsvägen 16, 504 64 Borås, Sweden",
+    "phone": "Phone",
+    "email": "Email",
+    "allRightsReserved": "All rights reserved"
+  }
+}
