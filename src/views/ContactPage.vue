@@ -1,8 +1,5 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import { useI18n } from 'vue-i18n'
-
-const { t } = useI18n()
 
 const formData = ref({
   name: '',
@@ -28,7 +25,6 @@ const validateForm = () => {
 
 const submitForm = () => {
   if (validateForm()) {
-    // Simulate form submission
     submitted.value = true
     setTimeout(() => {
       formData.value = { name: '', company: '', email: '', phone: '', message: '' }
@@ -40,130 +36,120 @@ const submitForm = () => {
 
 <template>
   <div>
-    <!-- Hero -->
-    <section class="bg-dark text-white py-20">
-      <div class="container-custom text-center">
-        <h1 class="text-5xl font-bold mb-4">{{ t('nav.contact') }}</h1>
-        <p class="text-gray-400 max-w-2xl mx-auto">
-          Kontakta oss för att diskutera din projekt eller begära offert
-        </p>
-      </div>
-    </section>
-
     <!-- Contact Section -->
-    <section class="section-padding">
+    <section class="section-padding bg-gray-50 dark:bg-metal-gray">
       <div class="container-custom">
-        <div class="grid md:grid-cols-3 gap-12 mb-16">
+        <div class="max-w-3xl mx-auto text-center mb-16">
+          <h1 class="text-4xl md:text-5xl font-black text-gray-900 dark:text-white mb-4">
+            Kontakta oss
+          </h1>
+          <p class="text-xl text-gray-600 dark:text-gray-400">
+            Har du frågor eller vill diskutera ett projekt? Fyll i formuläret så återkommer vi inom 24 timmar.
+          </p>
+        </div>
+
+        <div class="grid lg:grid-cols-5 gap-12 items-start">
           <!-- Contact Info -->
-          <div>
-            <h3 class="text-xl font-bold mb-6">Kontaktinformation</h3>
+          <div class="lg:col-span-2 space-y-6">
+            <div class="bg-white dark:bg-dark rounded-2xl p-6 border border-gray-200 dark:border-gray-700">
+              <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-4">Adress</h3>
+              <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
+                Müller Mekaniska AB<br>
+                Viaredsvägen 16<br>
+                504 64 Borås, Sverige
+              </p>
+            </div>
 
-            <div class="space-y-6">
-              <!-- Address -->
-              <div>
-                <h4 class="font-semibold mb-2 flex items-center space-x-2">
-                  <svg class="w-5 h-5 text-accent-orange" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
-                  </svg>
-                  <span>Adress</span>
-                </h4>
-                <p class="text-gray-600 dark:text-gray-400">
-                  {{ t('footer.address') }}
-                </p>
-              </div>
-
-              <!-- Phone -->
-              <div>
-                <h4 class="font-semibold mb-2 flex items-center space-x-2">
-                  <svg class="w-5 h-5 text-accent-orange" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773c.346.897 1.17 2.045 2.468 3.343s2.447 2.122 3.343 2.468l.773-1.548a1 1 0 011.06-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 4 14.18 4 9.5V5a1 1 0 011-1h2.153Z" />
-                  </svg>
-                  <span>Telefon</span>
-                </h4>
-                <a href="tel:+46" class="text-accent-orange hover:text-accent-orange-dark transition-colors">
+            <div class="bg-white dark:bg-dark rounded-2xl p-6 border border-gray-200 dark:border-gray-700">
+              <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-4">Kontakt</h3>
+              <div class="space-y-3">
+                <a href="tel:+46" class="block text-gray-600 dark:text-gray-400 hover:text-accent-orange transition-colors">
                   +46 (0)
                 </a>
-              </div>
-
-              <!-- Email -->
-              <div>
-                <h4 class="font-semibold mb-2 flex items-center space-x-2">
-                  <svg class="w-5 h-5 text-accent-orange" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
-                    <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
-                  </svg>
-                  <span>E-post</span>
-                </h4>
-                <a href="mailto:info@muller.se" class="text-accent-orange hover:text-accent-orange-dark transition-colors">
+                <a href="mailto:info@muller.se" class="block text-gray-600 dark:text-gray-400 hover:text-accent-orange transition-colors">
                   info@muller.se
                 </a>
               </div>
             </div>
+
+            <div class="bg-accent-orange/5 dark:bg-accent-orange/10 border border-accent-orange/20 rounded-2xl p-6">
+              <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2">Snabbaste vägen?</h3>
+              <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">
+                Ring eller maila oss direkt för snabbast svar.
+              </p>
+              <a href="mailto:info@muller.se" class="btn-primary w-full text-center">
+                Skicka e-post
+              </a>
+            </div>
           </div>
 
           <!-- Contact Form -->
-          <div class="md:col-span-2">
+          <div class="lg:col-span-3 bg-white dark:bg-dark rounded-2xl p-8 md:p-10 border border-gray-200 dark:border-gray-700">
             <form @submit.prevent="submitForm" class="space-y-6">
               <div v-if="submitted" class="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 text-green-800 dark:text-green-300 p-4 rounded-lg">
                 ✓ Tack för ditt meddelande! Vi kontaktar dig snart.
               </div>
 
-              <!-- Name -->
-              <div>
-                <label for="name" class="block text-sm font-medium mb-2">Namn *</label>
-                <input
-                  id="name"
-                  v-model="formData.name"
-                  type="text"
-                  class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-metal-gray bg-white dark:bg-metal-gray text-gray-900 dark:text-white focus:ring-2 focus:ring-accent-orange focus:border-transparent outline-none transition"
-                  :class="{ 'border-red-500': formErrors.name }"
-                />
-                <p v-if="formErrors.name" class="text-red-500 text-sm mt-1">{{ formErrors.name }}</p>
+              <div class="grid sm:grid-cols-2 gap-6">
+                <!-- Name -->
+                <div>
+                  <label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Namn *</label>
+                  <input
+                    id="name"
+                    v-model="formData.name"
+                    type="text"
+                    class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-metal-gray text-gray-900 dark:text-white focus:ring-2 focus:ring-accent-orange focus:border-transparent outline-none transition"
+                    :class="{ 'border-red-500': formErrors.name }"
+                  />
+                  <p v-if="formErrors.name" class="text-red-500 text-sm mt-1">{{ formErrors.name }}</p>
+                </div>
+
+                <!-- Company -->
+                <div>
+                  <label for="company" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Företag</label>
+                  <input
+                    id="company"
+                    v-model="formData.company"
+                    type="text"
+                    class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-metal-gray text-gray-900 dark:text-white focus:ring-2 focus:ring-accent-orange focus:border-transparent outline-none transition"
+                  />
+                </div>
               </div>
 
-              <!-- Company -->
-              <div>
-                <label for="company" class="block text-sm font-medium mb-2">Företag</label>
-                <input
-                  id="company"
-                  v-model="formData.company"
-                  type="text"
-                  class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-metal-gray bg-white dark:bg-metal-gray text-gray-900 dark:text-white focus:ring-2 focus:ring-accent-orange focus:border-transparent outline-none transition"
-                />
-              </div>
+              <div class="grid sm:grid-cols-2 gap-6">
+                <!-- Email -->
+                <div>
+                  <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">E-post *</label>
+                  <input
+                    id="email"
+                    v-model="formData.email"
+                    type="email"
+                    class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-metal-gray text-gray-900 dark:text-white focus:ring-2 focus:ring-accent-orange focus:border-transparent outline-none transition"
+                    :class="{ 'border-red-500': formErrors.email }"
+                  />
+                  <p v-if="formErrors.email" class="text-red-500 text-sm mt-1">{{ formErrors.email }}</p>
+                </div>
 
-              <!-- Email -->
-              <div>
-                <label for="email" class="block text-sm font-medium mb-2">E-post *</label>
-                <input
-                  id="email"
-                  v-model="formData.email"
-                  type="email"
-                  class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-metal-gray bg-white dark:bg-metal-gray text-gray-900 dark:text-white focus:ring-2 focus:ring-accent-orange focus:border-transparent outline-none transition"
-                  :class="{ 'border-red-500': formErrors.email }"
-                />
-                <p v-if="formErrors.email" class="text-red-500 text-sm mt-1">{{ formErrors.email }}</p>
-              </div>
-
-              <!-- Phone -->
-              <div>
-                <label for="phone" class="block text-sm font-medium mb-2">Telefon</label>
-                <input
-                  id="phone"
-                  v-model="formData.phone"
-                  type="tel"
-                  class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-metal-gray bg-white dark:bg-metal-gray text-gray-900 dark:text-white focus:ring-2 focus:ring-accent-orange focus:border-transparent outline-none transition"
-                />
+                <!-- Phone -->
+                <div>
+                  <label for="phone" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Telefon</label>
+                  <input
+                    id="phone"
+                    v-model="formData.phone"
+                    type="tel"
+                    class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-metal-gray text-gray-900 dark:text-white focus:ring-2 focus:ring-accent-orange focus:border-transparent outline-none transition"
+                  />
+                </div>
               </div>
 
               <!-- Message -->
               <div>
-                <label for="message" class="block text-sm font-medium mb-2">Meddelande *</label>
+                <label for="message" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Meddelande *</label>
                 <textarea
                   id="message"
                   v-model="formData.message"
                   rows="5"
-                  class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-metal-gray bg-white dark:bg-metal-gray text-gray-900 dark:text-white focus:ring-2 focus:ring-accent-orange focus:border-transparent outline-none transition resize-none"
+                  class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-metal-gray text-gray-900 dark:text-white focus:ring-2 focus:ring-accent-orange focus:border-transparent outline-none transition resize-none"
                   :class="{ 'border-red-500': formErrors.message }"
                 ></textarea>
                 <p v-if="formErrors.message" class="text-red-500 text-sm mt-1">{{ formErrors.message }}</p>
@@ -173,19 +159,6 @@ const submitForm = () => {
                 Skicka meddelande
               </button>
             </form>
-          </div>
-        </div>
-
-        <!-- Map Placeholder -->
-        <div class="mt-16 rounded-lg overflow-hidden shadow-soft h-96">
-          <div class="w-full h-full bg-gradient-to-br from-gray-200 dark:from-metal-gray to-gray-300 dark:to-gray-700 flex items-center justify-center">
-            <div class="text-center">
-              <svg class="w-16 h-16 text-gray-400 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-              </svg>
-              <p class="text-gray-600 dark:text-gray-400">Google Maps integation</p>
-            </div>
           </div>
         </div>
       </div>

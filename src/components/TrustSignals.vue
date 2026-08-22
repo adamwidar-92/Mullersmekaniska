@@ -3,42 +3,63 @@ const stats = [
   {
     number: '50+',
     label: 'År i industrin',
-    sublabel: 'Sedan 1970'
+    sublabel: 'Sedan 1970',
   },
   {
     number: '70+',
-    label: 'Patenterade produkter',
-    sublabel: 'Innovation DNA'
+    label: 'Patent & design',
+    sublabel: 'Innovation',
   },
   {
     number: '40',
-    label: 'Anställda',
-    sublabel: 'Dedikerade proffs'
+    label: 'Experter',
+    sublabel: 'Dedikerade team',
   },
   {
     number: '7000m²',
-    label: 'Modernt fabrik',
-    sublabel: 'Borås, Sverige'
+    label: 'Modern fabrik',
+    sublabel: 'Borås, Sverige',
   },
 ]
 </script>
 
 <template>
-  <section class="section-padding bg-white dark:bg-dark">
-    <div class="container-custom">
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
+  <section class="section-padding bg-dark relative overflow-hidden">
+    <!-- Background accents -->
+    <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-accent-orange/30 to-transparent"></div>
+    <div class="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gray-700 to-transparent"></div>
+
+    <div class="container-custom relative z-10">
+      <!-- Section Header -->
+      <div class="text-center mb-16 md:mb-20">
+        <h2 class="text-4xl md:text-5xl font-black text-white mb-4">
+          Byggda på erfarenhet
+        </h2>
+        <p class="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto text-center text-balance">
+          Decennier av precision, innovation och tillförlitlighet i varje komponent vi levererar.
+        </p>
+      </div>
+
+      <!-- Stats Grid -->
+      <div class="grid grid-cols-2 md:grid-cols-4 divide-y md:divide-y-0 md:divide-x divide-gray-800 border border-gray-800 rounded-2xl overflow-hidden">
         <div
-          v-for="stat in stats"
+          v-for="(stat, index) in stats"
           :key="stat.number"
-          class="text-center animate-slide-up card-hover"
+          class="flex flex-col items-center justify-center text-center p-8 md:p-10 group"
+          :class="{ 'md:border-l-0': index === 0 }"
         >
-          <div class="text-4xl md:text-5xl font-bold text-accent-orange mb-2">
+          <!-- Number -->
+          <div class="text-5xl md:text-6xl font-black text-accent-orange mb-3 group-hover:scale-110 transition-transform duration-300">
             {{ stat.number }}
           </div>
-          <div class="text-sm md:text-base font-semibold text-gray-900 dark:text-white mb-1">
+
+          <!-- Label -->
+          <div class="text-base md:text-lg font-bold text-white mb-1">
             {{ stat.label }}
           </div>
-          <div class="text-xs text-gray-600 dark:text-gray-400">
+
+          <!-- Sublabel -->
+          <div class="text-sm text-gray-400 font-medium">
             {{ stat.sublabel }}
           </div>
         </div>

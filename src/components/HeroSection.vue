@@ -1,48 +1,42 @@
-<script setup lang="ts">
-import { useI18n } from 'vue-i18n'
-
-const { t } = useI18n()
-</script>
+<script setup lang="ts"></script>
 
 <template>
-  <section class="relative min-h-screen flex items-center justify-center bg-dark overflow-hidden">
-    <!-- Background gradient -->
-    <div class="absolute inset-0 bg-gradient-to-br from-dark via-metal-gray to-dark opacity-50"></div>
-
-    <!-- Animated background elements -->
-    <div class="absolute top-20 right-20 w-96 h-96 bg-accent-orange opacity-5 rounded-full filter blur-3xl animate-pulse"></div>
-    <div class="absolute bottom-20 left-10 w-96 h-96 bg-accent-orange opacity-5 rounded-full filter blur-3xl animate-pulse" style="animation-delay: 2s;"></div>
+  <section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-24">
+    <!-- Background Image -->
+    <div class="absolute inset-0">
+      <img
+        src="/bilder/Bildpålokalen.jpg"
+        alt="Müller Mekaniska fabrik"
+        class="w-full h-full object-cover"
+      />
+      <!-- Dark Overlay -->
+      <div class="absolute inset-0 bg-black/60"></div>
+    </div>
 
     <!-- Content -->
-    <div class="relative container-custom py-20">
-      <div class="max-w-4xl mx-auto text-center">
-        <!-- Main Slogan -->
-        <div class="animate-fade-in">
-          <h1 class="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-            {{ t('hero.slogan') }}
-          </h1>
+    <div class="relative container-custom py-32 max-w-5xl z-10">
+      <div class="text-center space-y-10">
+        <!-- Main Heading -->
+        <h1 class="text-6xl md:text-8xl font-black text-white leading-tight tracking-tighter">
+          Quality by Innovation
+        </h1>
 
-          <!-- Tagline -->
-          <p class="text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            {{ t('hero.tagline') }}
-          </p>
+        <!-- Subheading -->
+        <p class="text-xl md:text-2xl text-gray-100 max-w-3xl mx-auto font-light leading-relaxed">
+          Högkvalitativa precisionkomponenter för formverktyg och plastindustrin
+        </p>
 
-          <!-- CTA Buttons -->
-          <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <RouterLink to="/kontakt" class="btn-primary">
-              {{ t('common.requestQuote') }}
-            </RouterLink>
-            <RouterLink to="/produkter" class="btn-outline text-white border-white hover:bg-white hover:text-dark">
-              {{ t('nav.products') }}
-            </RouterLink>
-          </div>
-
-          <!-- Scroll indicator -->
-          <div class="mt-20 flex justify-center animate-bounce">
-            <svg class="w-6 h-6 text-accent-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-            </svg>
-          </div>
+        <!-- CTA Buttons -->
+        <div class="flex flex-col sm:flex-row gap-6 justify-center pt-8">
+          <RouterLink to="/kontakt" class="btn-primary text-lg py-4 px-8">
+            Begär offert
+          </RouterLink>
+          <RouterLink
+            to="/produkter"
+            class="inline-flex items-center justify-center gap-2 rounded-lg border-2 border-white bg-white/10 px-8 py-4 text-lg font-medium text-white backdrop-blur-sm transition-colors duration-200 hover:bg-white hover:text-dark"
+          >
+            Utforska produkter
+          </RouterLink>
         </div>
       </div>
     </div>
