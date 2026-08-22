@@ -23,13 +23,25 @@ const validateForm = () => {
   return Object.keys(formErrors.value).length === 0
 }
 
-const submitForm = () => {
+const submitForm = async () => {
   if (validateForm()) {
-    submitted.value = true
-    setTimeout(() => {
-      formData.value = { name: '', company: '', email: '', phone: '', message: '' }
-      submitted.value = false
-    }, 3000)
+    try {
+      const response = await fetch('https://formspree.io/f/xwpddvqv', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData.value),
+      })
+
+      if (response.ok) {
+        submitted.value = true
+        setTimeout(() => {
+          formData.value = { name: '', company: '', email: '', phone: '', message: '' }
+          submitted.value = false
+        }, 4000)
+      }
+    } catch (error) {
+      console.error('Form submission error:', error)
+    }
   }
 }
 </script>
@@ -63,8 +75,8 @@ const submitForm = () => {
             <div class="bg-white dark:bg-dark rounded-2xl p-6 border border-gray-200 dark:border-gray-700">
               <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-4">Kontakt</h3>
               <div class="space-y-3">
-                <a href="tel:+46" class="block text-gray-600 dark:text-gray-400 hover:text-accent-orange transition-colors">
-                  +46 (0)
+                <a href="tel:+46334060" class="block text-gray-600 dark:text-gray-400 hover:text-accent-orange transition-colors">
+                  +46 (0)33 40 60
                 </a>
                 <a href="mailto:info@muller.se" class="block text-gray-600 dark:text-gray-400 hover:text-accent-orange transition-colors">
                   info@muller.se

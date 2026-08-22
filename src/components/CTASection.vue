@@ -14,7 +14,7 @@
       </h2>
 
       <!-- Subheading -->
-      <p class="text-xl md:text-2xl text-gray-200 mb-12 leading-relaxed max-w-2xl mx-auto text-center">
+      <p class="">
         Kontakta oss idag för en kostnadsfri konsultation. Vårt team hjälper dig att hitta rätt precisionslösning för dina behov.
       </p>
 
@@ -24,10 +24,10 @@
           Begär offert
         </RouterLink>
         <a
-          href="tel:+46"
+          href="tel:+46334060"
           class="inline-flex items-center justify-center gap-2 rounded-lg border-2 border-white bg-white/10 px-10 py-4 text-lg font-bold text-white backdrop-blur-sm transition-colors duration-200 hover:bg-white hover:text-dark"
         >
-          Ring oss: +46 (0)
+          Ring oss: +46 (0)33 40 60
         </a>
       </div>
     </div>

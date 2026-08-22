@@ -33,9 +33,9 @@ const stats = [
       <!-- Section Header -->
       <div class="text-center mb-16 md:mb-20">
         <h2 class="text-4xl md:text-5xl font-black text-white mb-4">
-          Byggda på erfarenhet
+          Innovation med kunskap
         </h2>
-        <p class="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto text-center text-balance">
+        <p class="">
           Decennier av precision, innovation och tillförlitlighet i varje komponent vi levererar.
         </p>
       </div>

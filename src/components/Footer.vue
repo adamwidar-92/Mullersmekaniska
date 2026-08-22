@@ -79,7 +79,7 @@ const currentYear = new Date().getFullYear()
             <li class="text-gray-400">Viaredsvägen 16</li>
             <li class="text-gray-400">504 64 Borås, Sverige</li>
             <li>
-              <a href="tel:+46" class="text-gray-400 hover:text-accent-orange transition-colors font-medium">+46 (0)</a>
+              <a href="tel:+46334060" class="text-gray-400 hover:text-accent-orange transition-colors font-medium">+46 (0)33 40 60</a>
             </li>
             <li>
               <a href="mailto:info@muller.se" class="text-gray-400 hover:text-accent-orange transition-colors font-medium">info@muller.se</a>
