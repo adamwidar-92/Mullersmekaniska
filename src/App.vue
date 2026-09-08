@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import Header from './components/Header.vue'
 import Footer from './components/Footer.vue'
+import BackToTop from './components/BackToTop.vue'
 </script>
 
 <template>
@@ -12,7 +13,6 @@ import Footer from './components/Footer.vue'
     </main>
 
     <Footer />
+    <BackToTop />
   </div>
 </template>
-
-<style scoped></style>

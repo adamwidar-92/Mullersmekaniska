@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f4f5f9"/>
+      <stop offset="1" stop-color="#e2e5ee"/>
+    </linearGradient>
+    <linearGradient id="steel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#c9cede"/>
+      <stop offset="0.5" stop-color="#8d94ad"/>
+      <stop offset="1" stop-color="#6b7288"/>
+    </linearGradient>
+    <linearGradient id="steel2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#aab0c4"/>
+      <stop offset="1" stop-color="#7c8299"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#c3c8d6" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg)"/>
+  <rect width="1200" height="800" fill="url(#grid)" opacity="0.5"/>
+  <!-- technical drawing: pneumatic coupling -->
+  <g transform="translate(600 400)">
+    <!-- body -->
+    <rect x="-260" y="-70" width="520" height="140" rx="16" fill="url(#steel)" stroke="#565c72" stroke-width="3"/>
+    <!-- knurling -->
+    <rect x="-180" y="-70" width="120" height="140" fill="url(#steel2)" stroke="#565c72" stroke-width="2"/>
+    <g stroke="#565c72" stroke-width="2">
+      <line x1="-165" y1="-70" x2="-165" y2="70"/>
+      <line x1="-140" y1="-70" x2="-140" y2="70"/>
+      <line x1="-115" y1="-70" x2="-115" y2="70"/>
+      <line x1="-90" y1="-70" x2="-90" y2="70"/>
+      <line x1="-65" y1="-70" x2="-65" y2="70"/>
+    </g>
+    <!-- collar -->
+    <rect x="40" y="-90" width="90" height="180" rx="10" fill="url(#steel2)" stroke="#565c72" stroke-width="3"/>
+    <!-- nose -->
+    <path d="M 130 -45 L 250 -45 L 250 45 L 130 45 Z" fill="url(#steel)" stroke="#565c72" stroke-width="3"/>
+    <rect x="250" y="-45" width="30" height="90" rx="6" fill="url(#steel2)" stroke="#565c72" stroke-width="3"/>
+    <!-- threads left -->
+    <rect x="-320" y="-38" width="60" height="76" fill="url(#steel2)" stroke="#565c72" stroke-width="3"/>
+    <g stroke="#565c72" stroke-width="2">
+      <line x1="-320" y1="-24" x2="-260" y2="-24"/>
+      <line x1="-320" y1="0" x2="-260" y2="0"/>
+      <line x1="-320" y1="24" x2="-260" y2="24"/>
+    </g>
+    <!-- bore -->
+    <ellipse cx="280" cy="0" rx="12" ry="34" fill="#3f4457"/>
+    <!-- dimension lines -->
+    <g stroke="#e85d04" stroke-width="2" stroke-dasharray="8 6">
+      <line x1="-320" y1="140" x2="280" y2="140"/>
+    </g>
+    <g stroke="#e85d04" stroke-width="2">
+      <line x1="-320" y1="128" x2="-320" y2="152"/>
+      <line x1="280" y1="128" x2="280" y2="152"/>
+    </g>
+    <text x="-20" y="130" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="26" fill="#e85d04" font-weight="600">PK168</text>
+  </g>
+  <text x="600" y="110" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="34" fill="#3f4457" font-weight="700" letter-spacing="6">PNEUMATISK SNABBKOPPLING</text>
+  <text x="600" y="700" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="24" fill="#7c8299" font-weight="500" letter-spacing="4">TYP PK · MÜLLER MEKANISKA AB</text>
+</svg>
